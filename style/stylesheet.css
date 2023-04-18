@@ -6,15 +6,13 @@ body {
     background-color: rgba(171, 231, 255, 0.68);
     display: flex;
 }
-#logoDiv {
-    max-width: 25%;
-}
 #logoImage {
-    max-width: 50%;
+    padding: 15%;
+    max-width: 100%;
     height: auto;
 }
 .navigation {
-
+    padding:5%;
 }
 .navigation ul {
     list-style-type: none;
@@ -27,15 +25,45 @@ body {
 .navigation li {
     height: 100%;
 }
-.navigation a {
+.navA {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 30px;
     padding: 20px 50px 20px 50px;
+    margin-right: 25px;
+    border-radius: 15px;
     color: #333;
     text-decoration: none;
     background-color: #77b6d7;
+    font-family: "Century Gothic", serif;
+    font-size: 80%;
 }
 .navigation a:hover {
     background-color: rgba(24, 99, 187, 0.24);
+    color: white;
+}
+.navigation a:active {
+    color: blue;
+}
+.content {
+    display: flex;
+    padding-top: 10px;
+}
+.content aside {
+    flex: 1;
+    background-color: #77b6d7;
+    border-radius: 10px;
+}
+.content h2 {
+    padding: 5%;
+}
+.tag {
+    margin: 2%;
+    background-color: rgba(171, 231, 255, 0.68);
+    border-radius: 5px;
+    font-family: "Century Gothic", serif;
+}
+.mainContent {
+    flex: 3;
+    padding: 3%;
 }
