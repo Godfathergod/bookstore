@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Особистий кабінет</title>
+    <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
+</head>
+<body>
+<header>
+    <div class="header">
+        <div id="logoDiv">
+            <a href="index.html">
+                <img id="logoImage" src="style/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="navA">Головна</a></li>
+                    <li><a href="index.html" class="navA"
+                           id="fiction" onmouseenter="onFictionButton()">Художня література</a></li>
+                    <li><a href="index.html" class="navA">Прикладна література</a></li>
+                    <li><a href="index.html" class="navA">Навчальна література</a></li>
+                    <li><a href="index.html" class="navA">Особистий кабінет</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <aside>
+        <h2>Теги</h2>
+        <p>
+            <a class="tag" href="index.html">#космос</a>
+            <a class="tag" href="index.html">#любов</a>
+            <a class="tag" href="index.html">#друга_світова</a>
+            <a class="tag" href="index.html">#дружба</a>
+            <a class="tag" href="index.html">#антиутопія</a>
+            <a class="tag" href="index.html">#реалізм</a>
+            <a class="tag" href="index.html">#романтика</a>
+            <a class="tag" href="index.html">#море</a>
+            <a class="tag" href="index.html">#філософія</a>
+            <a class="tag" href="index.html">#психологія</a>
+            <a class="tag" href="index.html">#саморозвиток</a>
+            <a class="tag" href="index.html">#історія</a>
+        </p>
+    </aside>
+    <div class="mainContent">
+        <div id="userInfo">
+            <div id="userForm">
+                <form>
+                    <label for="username">Нік користувача</label><br>
+                    <input type="text" id="username" name="username"><br><br>
+
+                    <label>Оберіть стать</label><br>
+                    <input type="radio" id="male" name="gender" value="male"><label for="male">Чоловік</label><br>
+                    <input type="radio" id="female" name="gender" value="female"><label for="female">Жінка</label><br>
+                    <input type="radio" id="other" name="gender" value="other"><label for="other">Інше</label><br><br>
+
+                    <label for="birthdate">Дата народження</label><br>
+                    <input type="date" id="birthdate" name="birthdate"><br><br>
+
+                    <label for="bio">Про себе</label><br>
+                    <textarea id="bio" name="bio" rows="10" cols="30"
+                              placeholder="Напишіть кілька слів про себе..."></textarea><br><br>
+                </form>
+                <button onclick="submitForm()">SubmiT</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="scripts/profilePage.js"></script>
+</html>

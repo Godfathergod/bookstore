@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Your Bookshelf</title>
-    <script src = "scripts/index.js"></script>
     <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
 </head>
 <body>
@@ -18,10 +17,11 @@
                 <nav>
                     <ul>
                         <li><a href="index.html" class="navA">Головна</a></li>
-                        <li><a href="index.html" class="navA">Художня література</a></li>
+                        <li><a href="index.html" class="navA"
+                               id = "fiction" onmouseenter = "onFictionButton()">Художня література</a></li>
                         <li><a href="index.html" class="navA">Прикладна література</a></li>
                         <li><a href="index.html" class="navA">Навчальна література</a></li>
-                        <li><a href="index.html" class="navA">Особистий кабінет</a></li>
+                        <li><a href="profile.html" class="navA">Особистий кабінет</a></li>
                     </ul>
                 </nav>
             </div>
@@ -62,4 +62,5 @@
         </div>
     </div>
 </body>
+<script src = "scripts/index.js"></script>
 </html>

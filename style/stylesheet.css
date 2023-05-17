@@ -67,3 +67,7 @@ body {
     flex: 3;
     padding: 3%;
 }
+.fictionList {
+    position: absolute;
+    display: none;
+}
