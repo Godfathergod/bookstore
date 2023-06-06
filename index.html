@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Your Bookshelf</title>
-    <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/style/stylesheet.css">
 </head>
 <body>
     <header>
         <div class = "header">
             <div id="logoDiv">
                 <a href="index.html">
-                    <img id = "logoImage"src="style/logo.png" alt="logo">
+                    <img id = "logoImage" src="/style/logo.png" alt="logo">
                 </a>
             </div>
             <div class = "navigation">
@@ -57,8 +57,18 @@
             <p>
                 Curabitur eget vulputate nisi. Etiam at efficitur dolor, nec iaculis libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus nibh purus, varius non mattis quis, bibendum quis libero. Proin et accumsan elit. Morbi maximus nisl id turpis scelerisque tincidunt. Nunc vitae bibendum eros, ac vulputate justo. Maecenas erat nisi, dignissim id venenatis sit amet, blandit convallis nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate urna vitae arcu dignissim, eget vehicula est efficitur. Duis luctus ultrices fermentum. Curabitur ligula est, vehicula vel malesuada vel, facilisis ac magna. Duis congue, turpis sed imperdiet hendrerit, velit nunc vehicula purus, sed interdum magna eros sit amet diam. Duis urna tellus, congue vel blandit vel, finibus aliquet tortor. Vestibulum a pulvinar magna. Nam aliquam ipsum ac ipsum vehicula interdum.
             </p>
-
-
+            <hr>
+            <div class="comments">
+                <h2>Відгуки користувачів</h2>
+                <div id ="oldComments"></div>
+                <form action="/" method="post">
+                    <label for="username">Ім'я</label><br>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="comment">Відгук</label><br>
+                    <textarea id="comment" name="comment" rows="10" cols="50"></textarea><br><br>
+                    <input type="submit" value="Відправити">
+                </form>
+            </div>
         </div>
     </div>
 </body>

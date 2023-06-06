@@ -1,9 +1,8 @@
 "use strict"
 
-const fictionButton = document.getElementById("fiction");
+//const oldCommentsDiv = document.getElementById("oldComments");
 
 
 
-function submitForm() {
 
-}
+
