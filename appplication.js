@@ -1,12 +1,12 @@
 const express = require('express');
 const fs = require('fs');
+const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const app = express();
-
 const commentFilePath = 'data/comments.txt';
-
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine','ejs');
 
 app.get('/', (req, res) => {
@@ -16,12 +16,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  const username = req.body.username;
-  const comment = req.body.comment;
+  const formData = req.body;
+  const username = formData.username;
+  const comment = formData.comment;
+
+  console.log(username + " " + comment);
 
   saveComment(username, comment);
 
-  res.redirect('/')
+  res.send({success: true, time: getCurrentTime()})
 });
 
 app.listen(8080, () => {
@@ -49,8 +52,7 @@ function getComments() {
     console.log(error, "Error with reading comment file:", error);
   }
 }
-
-function getCurrentTime() {
+ function getCurrentTime() {
   let currentTime = new Date();
   return currentTime.getDate() + "/"
     + (currentTime.getMonth()+1)  + "/"
