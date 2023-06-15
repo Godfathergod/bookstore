@@ -59,6 +59,6 @@ function getCurrentTime() {
     + (currentTime.getMonth() + 1) + "/"
     + currentTime.getFullYear() + " | "
     + currentTime.getHours() + ":"
-    + (currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes())
+    + (currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes()) + ':'
     + (currentTime.getSeconds() < 10 ? '0' + currentTime.getSeconds() : currentTime.getSeconds());
 }
