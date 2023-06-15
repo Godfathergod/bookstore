@@ -6,13 +6,13 @@ const app = express();
 const commentFilePath = 'data/comments.txt';
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.set('view engine','ejs');
+app.use(bodyParser.urlencoded({extended: false}));
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    const comments = getComments();
-    const time = getCurrentTime();
-    res.render('index', { comments, time});
+  const comments = getComments();
+  const time = getCurrentTime();
+  res.render('index', {comments, time});
 });
 
 app.post('/', (req, res) => {
@@ -52,11 +52,13 @@ function getComments() {
     console.log(error, "Error with reading comment file:", error);
   }
 }
- function getCurrentTime() {
+
+function getCurrentTime() {
   let currentTime = new Date();
   return currentTime.getDate() + "/"
-    + (currentTime.getMonth()+1)  + "/"
+    + (currentTime.getMonth() + 1) + "/"
     + currentTime.getFullYear() + " | "
     + currentTime.getHours() + ":"
-    + currentTime.getMinutes();
+    + (currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes())
+    + (currentTime.getSeconds() < 10 ? '0' + currentTime.getSeconds() : currentTime.getSeconds());
 }
