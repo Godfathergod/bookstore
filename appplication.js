@@ -27,7 +27,7 @@ app.post('/', (req, res) => {
   res.send({success: true, time: getCurrentTime()})
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("App is running http://localhost:8080");
 });
 
